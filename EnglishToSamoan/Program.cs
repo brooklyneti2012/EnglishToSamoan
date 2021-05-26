@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace EnglishToSamoan
 {
@@ -58,20 +59,33 @@ namespace EnglishToSamoan
 
             static void ONE()
             {
+                //welcomes user to tutorial 1
                 Console.WriteLine("Welcome to level 1/5 of the Samoan tutorial");
-                Console.WriteLine("In this tutorial you will be learning a simple conversation starter");
+                Console.WriteLine("In this tutorial you will be learning simple Samoan words");
                 Console.WriteLine("Press ENTER to continue");
                 Console.ReadLine();
                 Console.WriteLine("The greeting used most of is 'Talofa'(tah - loh - fah)");
-                Console.WriteLine("An simple example of this greeting used in a sentence is...");
                 Console.WriteLine("");
-                Console.WriteLine("Talofa, my name is John.");
-                Console.WriteLine("___________________________________________________________");
-                Console.WriteLine("Press ENTER to continue to excercise");
-                Console.ReadLine();
-                Console.WriteLine("This time write the example sentence but with your name");
-                Console.WriteLine("Talofa, my name is"); 
-                string eg = Console.ReadLine();
+                Console.WriteLine("Try writing 'Talofa' yourself.");
+                string talofa = Console.ReadLine();
+
+                if (talofa == "talofa")
+                {
+                    Console.WriteLine("Nice job we will now move onto the next word to learn.");   
+                }
+                else if (talofa == "Talofa")
+                {
+                    Console.WriteLine("Nice job we will now move onto the next word to learn.");
+                }
+                else
+                {
+                    Console.WriteLine("That is incorrect, try again.");
+                }
+
+
+
+
+
 
 
                 Console.ReadKey();

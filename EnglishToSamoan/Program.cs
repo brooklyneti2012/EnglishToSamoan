@@ -104,26 +104,76 @@ namespace EnglishToSamoan
                         retry();
                     }
 
-                    Console.WriteLine("The next word we will try to learn to say the days of the week");
-                    Console.WriteLine("press any key to continue");
-                    Console.ReadLine();
-                    Console.WriteLine("The Samoan way to say monday is 'Aso Gafua' (ah - soh   nga - foo - wa)");
-                    Console.WriteLine("Try typing Monday in Samoan");
-
-                    string mon = Console.ReadLine();
-
-                    if (mon == "Aso Gafua" && mon == "aso gafua" && mon == "Aso gafua" && mon == "ASO GAFUA")
-                    {
-                        Console.WriteLine("Congrats, we will now move onto Tuesday in Samoan");
-                    }
-                    else 
-                    {
-                    
-                    }
+                   
                     
 
+                    
+                }
+                Console.WriteLine("The next word we will try to learn is Goodbye");
+                Console.WriteLine("press any key to continue");
+                Console.ReadLine();
+                Console.WriteLine("The Samoan way to say Goodbye is 'Tofa' (toh - fah)");
+                Console.WriteLine("Try typing Tofa yourself");
+
+                string tofa = Console.ReadLine();
+
+                if (tofa == "Tofa" && tofa == "tofa" && tofa == "TOFA")
+                {
+                    Console.WriteLine("Nice job our next word we will be learning is good morning");
+                }
+                else
+                {
+                    Console.WriteLine("Ooh, try again remeber the word is 'TOFA' ");
+                    retry1();
+                }
+                static void retry1 ()
+                {
+                    string tofa = Console.ReadLine();
+
+                    if (tofa == "Tofa" && tofa == "tofa" && tofa == "TOFA")
+                    {
+                        Console.WriteLine("Nice job our next words we will be learning is boy and girl");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ooh, try again remeber the word is 'TOFA' ");
+                        retry1();
+                    }
                 }
 
+                Console.WriteLine("The last words we will be learning in level one is 'TAMA and TEINE' which means boy and girl");
+                Console.WriteLine("Tama means boy");
+                Console.WriteLine("Teine means girl");
+                Console.WriteLine("Press enter to continue to excercise");
+                Console.ReadLine();
+                Console.WriteLine("Try type 'Tama' yourself");
+
+                string Tama = Console.ReadLine();
+
+                if (Tama == "tama" && Tama == "Tama")
+                {
+                    Console.WriteLine("Congratulations, we will now move onto the end of tutorial quiz");
+                }
+                else
+                {
+                    Console.WriteLine("That is incorrect, try again");
+                    tama();
+                }
+
+                static void tama ()
+                {
+                    string Tama = Console.ReadLine();
+
+                    if (Tama == "tama" && Tama == "Tama")
+                    {
+                        Console.WriteLine("Congratulations, we will now move onto the end of tutorial quiz");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect, try again");
+                        tama();
+                    }
+                }
 
 
 

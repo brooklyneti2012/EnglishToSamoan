@@ -80,6 +80,48 @@ namespace EnglishToSamoan
                 else
                 {
                     Console.WriteLine("That is incorrect, try again.");
+                    retry();
+                }
+
+                static void retry ()
+                {
+                  Console.WriteLine("Try writing 'Talofa' yourself.");
+
+                    string talofa = Console.ReadLine();
+
+                    if (talofa == "talofa" && talofa == "TALOFA")
+                    {
+                        Console.WriteLine("Nice job we will now move onto the next word to learn.");
+                    }
+                    else if (talofa == "Talofa")
+                    {
+                        Console.WriteLine("Nice job we will now move onto the next word to learn.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect, try again.");
+                        Console.WriteLine("PRESS ENTER TO TRY AGAIN");
+                        retry();
+                    }
+
+                    Console.WriteLine("The next word we will try to learn to say the days of the week");
+                    Console.WriteLine("press any key to continue");
+                    Console.ReadLine();
+                    Console.WriteLine("The Samoan way to say monday is 'Aso Gafua' (ah - soh   nga - foo - wa)");
+                    Console.WriteLine("Try typing Monday in Samoan");
+
+                    string mon = Console.ReadLine();
+
+                    if (mon == "Aso Gafua" && mon == "aso gafua" && mon == "Aso gafua" && mon == "ASO GAFUA")
+                    {
+                        Console.WriteLine("Congrats, we will now move onto Tuesday in Samoan");
+                    }
+                    else 
+                    {
+                    
+                    }
+                    
+
                 }
 
 

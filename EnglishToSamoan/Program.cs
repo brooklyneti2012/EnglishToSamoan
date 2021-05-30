@@ -64,6 +64,7 @@ namespace EnglishToSamoan
                 Console.WriteLine("In this tutorial you will be learning simple Samoan words");
                 Console.WriteLine("Press ENTER to continue");
                 Console.ReadLine();
+                Console.Clear();
                 Console.WriteLine("The greeting used most of is 'Talofa'(tah - loh - fah)");
                 Console.WriteLine("");
                 Console.WriteLine("Try writing 'Talofa' yourself.");
@@ -83,20 +84,18 @@ namespace EnglishToSamoan
                     retry();
                 }
 
+                //retry method for Talofa 
                 static void retry ()
                 {
                   Console.WriteLine("Try writing 'Talofa' yourself.");
 
                     string talofa = Console.ReadLine();
 
-                    if (talofa == "talofa" && talofa == "TALOFA")
+                    if (talofa == "talofa" && talofa == "TALOFA" && talofa == "Talofa" )
                     {
                         Console.WriteLine("Nice job we will now move onto the next word to learn.");
-                    }
-                    else if (talofa == "Talofa")
-                    {
-                        Console.WriteLine("Nice job we will now move onto the next word to learn.");
-                    }
+                        
+                    }                    
                     else
                     {
                         Console.WriteLine("That is incorrect, try again.");
@@ -109,71 +108,58 @@ namespace EnglishToSamoan
 
                     
                 }
+
+                Console.Clear();
                 Console.WriteLine("The next word we will try to learn is Goodbye");
                 Console.WriteLine("press any key to continue");
                 Console.ReadLine();
                 Console.WriteLine("The Samoan way to say Goodbye is 'Tofa' (toh - fah)");
-                Console.WriteLine("Try typing Tofa yourself");
+                Console.WriteLine("Try typing 'Tofa' yourself");
 
-                string tofa = Console.ReadLine();
-
-                if (tofa == "Tofa" && tofa == "tofa" && tofa == "TOFA")
-                {
-                    Console.WriteLine("Nice job our next word we will be learning is good morning");
-                }
-                else
-                {
-                    Console.WriteLine("Ooh, try again remeber the word is 'TOFA' ");
-                    retry1();
-                }
-                static void retry1 ()
-                {
                     string tofa = Console.ReadLine();
 
-                    if (tofa == "Tofa" && tofa == "tofa" && tofa == "TOFA")
+                    if (tofa == "Tofa" && tofa == "TOFA" && tofa == "tofa")
                     {
-                        Console.WriteLine("Nice job our next words we will be learning is boy and girl");
+                        Console.WriteLine("Nice job our next word we will be learning is Tama and Teine");
                     }
                     else
                     {
                         Console.WriteLine("Ooh, try again remeber the word is 'TOFA' ");
-                        retry1();
+                        tryagain();
                     }
-                }
-
-                Console.WriteLine("The last words we will be learning in level one is 'TAMA and TEINE' which means boy and girl");
-                Console.WriteLine("Tama means boy");
-                Console.WriteLine("Teine means girl");
-                Console.WriteLine("Press enter to continue to excercise");
-                Console.ReadLine();
-                Console.WriteLine("Try type 'Tama' yourself");
-
-                string Tama = Console.ReadLine();
-
-                if (Tama == "tama" && Tama == "Tama")
+               
+                //retry method for TOFA 
+                static void tryagain()
                 {
-                    Console.WriteLine("Congratulations, we will now move onto the end of tutorial quiz");
-                }
-                else
-                {
-                    Console.WriteLine("That is incorrect, try again");
-                    tama();
-                }
+                    Console.WriteLine("Try writing 'tofa' yourself.");
 
-                static void tama ()
-                {
-                    string Tama = Console.ReadLine();
+                    string tofa = Console.ReadLine();
 
-                    if (Tama == "tama" && Tama == "Tama")
+                    if (tofa == "Tofa" && tofa == "TOFA" && tofa == "tofa")
                     {
-                        Console.WriteLine("Congratulations, we will now move onto the end of tutorial quiz");
-                    }
+                        Console.WriteLine("Nice job we will now move onto the next word to learn is Tama and Teine.");
+
+                    }                  
                     else
                     {
-                        Console.WriteLine("That is incorrect, try again");
-                        tama();
+                        Console.WriteLine("That is incorrect, try again.");
+                        Console.WriteLine("PRESS ENTER TO TRY AGAIN");
+                        tryagain();
                     }
+
                 }
+                Console.Clear(); 
+                Console.WriteLine("We will now be learning 'Tama'(tah - mah) and 'Teine'(Tey - neh)");
+                Console.WriteLine("tama means 'BOY' and in some situations 'DAD'");
+                Console.WriteLine("and teine means 'GIRL' and in some situation 'MUM'");
+                Console.WriteLine("_________________________________________________________________");
+                Console.WriteLine("PRESS ENTER TO CONTINUE");
+                Console.ReadLine();
+                Console.Clear();
+
+
+
+
 
 
 

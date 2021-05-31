@@ -11,7 +11,7 @@ namespace EnglishToSamoan
         {
             Console.WriteLine("Welcome to the Samoan tutorial");
 
-            Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language");
+            Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language, and then press enter to continue");
 
             int answer;
             int.TryParse(Console.ReadLine(), out answer);
@@ -65,33 +65,31 @@ namespace EnglishToSamoan
                 Console.WriteLine("Press ENTER to continue");
                 Console.ReadLine();
                 Console.Clear();
-                Console.WriteLine("The greeting used most of is 'Talofa'(tah - loh - fah)");
+                Console.WriteLine("The greeting used most in the Samoan language is 'Talofa'(tah - loh - fah)");
                 Console.WriteLine("");
                 Console.WriteLine("Try writing 'Talofa' yourself.");
                 string talofa = Console.ReadLine();
+                talofa = talofa.ToLower();
 
                 if (talofa == "talofa")
                 {
                     Console.WriteLine("Nice job we will now move onto the next word to learn.");   
                 }
-                else if (talofa == "Talofa")
-                {
-                    Console.WriteLine("Nice job we will now move onto the next word to learn.");
-                }
-                else
+               else
                 {
                     Console.WriteLine("That is incorrect, try again.");
                     retry();
                 }
 
                 //retry method for Talofa 
-                static void retry ()
+                static void retry()
                 {
                   Console.WriteLine("Try writing 'Talofa' yourself.");
 
                     string talofa = Console.ReadLine();
+                    talofa = talofa.ToLower();
 
-                    if (talofa == "talofa" && talofa == "TALOFA" && talofa == "Talofa" )
+                    if (talofa == "talofa" )
                     {
                         Console.WriteLine("Nice job we will now move onto the next word to learn.");
                         
@@ -117,8 +115,9 @@ namespace EnglishToSamoan
                 Console.WriteLine("Try typing 'Tofa' yourself");
 
                     string tofa = Console.ReadLine();
+                    tofa = tofa.ToLower();
 
-                    if (tofa == "Tofa" && tofa == "TOFA" && tofa == "tofa")
+                    if (tofa == "tofa")
                     {
                         Console.WriteLine("Nice job our next word we will be learning is Tama and Teine");
                     }
@@ -134,8 +133,9 @@ namespace EnglishToSamoan
                     Console.WriteLine("Try writing 'tofa' yourself.");
 
                     string tofa = Console.ReadLine();
+                    tofa = tofa.ToLower();
 
-                    if (tofa == "Tofa" && tofa == "TOFA" && tofa == "tofa")
+                    if (tofa == "tofa")
                     {
                         Console.WriteLine("Nice job we will now move onto the next word to learn is Tama and Teine.");
 
@@ -158,11 +158,13 @@ namespace EnglishToSamoan
                 Console.Clear();
                 Console.WriteLine("Try typing 'TAMA' yourself");
                 string tama = Console.ReadLine();
+                tama = tama.ToLower();
 
-                if (tama == "TAMA" && tama == "tama" && tama == "Tama")
+                if (tama == "tama")
                 {
-                    Console.WriteLine("Congrats we will now move onto the end of tutorial quiz.");
+                    Console.WriteLine("Congrats we will now move onto teine.");
                     Console.WriteLine("PRESS ENTER TO CONTINUE");
+                    Console.ReadLine();
                 }
                 else
                 {
@@ -173,11 +175,13 @@ namespace EnglishToSamoan
                 static void again()
                 {
                     string tama = Console.ReadLine();
+                    tama = tama.ToLower();
 
-                    if (tama == "TAMA" && tama == "tama" && tama == "Tama")
+                    if (tama == "tama")
                     {
                         Console.WriteLine("Congrats we will now move onto teine.");
                         Console.WriteLine("PRESS ENTER TO CONTINUE");
+                        Console.ReadLine();
                        
                     }
                     else
@@ -187,12 +191,17 @@ namespace EnglishToSamoan
                     }
                 }
 
+                Console.Clear();
+
                 Console.WriteLine("Try typing Teine yourself");
                 string teine = Console.ReadLine();
+                teine = teine.ToLower();
 
-                if (teine == "TEINE" && teine == "teine" && teine == "Teine")
+                if (teine == "teine")
                 {
                     Console.WriteLine("Nice job, we will now move onto the End Of Tutorial Quiz");
+                    Console.WriteLine("Press enter to continue.");
+                    Console.ReadLine();
                     quiz();
                 }
                 else
@@ -204,10 +213,13 @@ namespace EnglishToSamoan
                 static void AGAIN()
                 {
                     string teine = Console.ReadLine();
+                    teine = teine.ToLower(); 
 
-                    if (teine == "TEINE" && teine == "teine" && teine == "Teine")
+                    if (teine == "teine")
                     {
                         Console.WriteLine("Nice job, we will now move onto the End Of Tutorial Quiz");
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
                         quiz();
                     }
                     else

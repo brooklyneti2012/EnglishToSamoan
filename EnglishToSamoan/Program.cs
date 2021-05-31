@@ -156,7 +156,77 @@ namespace EnglishToSamoan
                 Console.WriteLine("PRESS ENTER TO CONTINUE");
                 Console.ReadLine();
                 Console.Clear();
+                Console.WriteLine("Try typing 'TAMA' yourself");
+                string tama = Console.ReadLine();
 
+                if (tama == "TAMA" && tama == "tama" && tama == "Tama")
+                {
+                    Console.WriteLine("Congrats we will now move onto the end of tutorial quiz.");
+                    Console.WriteLine("PRESS ENTER TO CONTINUE");
+                }
+                else
+                {
+                    Console.WriteLine("That is incorrect try again.");
+                    again();
+                }
+
+                static void again()
+                {
+                    string tama = Console.ReadLine();
+
+                    if (tama == "TAMA" && tama == "tama" && tama == "Tama")
+                    {
+                        Console.WriteLine("Congrats we will now move onto teine.");
+                        Console.WriteLine("PRESS ENTER TO CONTINUE");
+                       
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect try again.");
+                        again();
+                    }
+                }
+
+                Console.WriteLine("Try typing Teine yourself");
+                string teine = Console.ReadLine();
+
+                if (teine == "TEINE" && teine == "teine" && teine == "Teine")
+                {
+                    Console.WriteLine("Nice job, we will now move onto the End Of Tutorial Quiz");
+                    quiz();
+                }
+                else
+                {
+                    Console.WriteLine("That was incorrect, try again");
+                    AGAIN();
+                }
+
+                static void AGAIN()
+                {
+                    string teine = Console.ReadLine();
+
+                    if (teine == "TEINE" && teine == "teine" && teine == "Teine")
+                    {
+                        Console.WriteLine("Nice job, we will now move onto the End Of Tutorial Quiz");
+                        quiz();
+                    }
+                    else
+                    {
+                        Console.WriteLine("That was incorrect, try again");
+                        AGAIN();
+                    }
+                }
+                
+                static void quiz()
+                {
+                    Console.Clear();
+                    Console.WriteLine("Welcome to the end of tutorial quiz.");
+                    Console.WriteLine("After this tutorial you will move onto the next tutorial");
+                    Console.WriteLine("Answer every question with 'A,a' or 'B,b'");
+                    Console.WriteLine("Press enter to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
 
 
 

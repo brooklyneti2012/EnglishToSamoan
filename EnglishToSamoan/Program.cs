@@ -92,6 +92,8 @@ namespace EnglishToSamoan
                     if (talofa == "talofa" )
                     {
                         Console.WriteLine("Nice job we will now move onto the next word to learn.");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
                         
                     }                    
                     else
@@ -120,6 +122,7 @@ namespace EnglishToSamoan
                     if (tofa == "tofa")
                     {
                         Console.WriteLine("Nice job our next word we will be learning is Tama and Teine");
+                    Console.WriteLine("PRESS ENTER TO CONTINUE.");
                     }
                     else
                     {
@@ -238,6 +241,59 @@ namespace EnglishToSamoan
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
                     Console.Clear();
+                    Console.WriteLine("Question 1");
+                    Console.WriteLine("Which word means BOY in Samoan?");
+                    Console.WriteLine("A. Teine");
+                    Console.WriteLine("B. Tama");
+                    Console.WriteLine("Enter your answer below (A or B)");
+                    string Q1 = Console.ReadLine();
+                    Q1 = Q1.ToLower();
+
+                    if (Q1 == "b")
+                    {
+                        Console.WriteLine("Correct, press enter to continue to next question");
+                        Console.ReadLine();
+                    }
+                    else 
+                    {
+                        Console.WriteLine("That is incorrect, press enter to try again");
+                        Console.ReadLine();
+                        QUE1();
+                        
+                    }
+
+                    static void QUE1()
+                    {
+                        string Q1 = Console.ReadLine();
+                        Q1 = Q1.ToLower();
+
+                        if (Q1 == "b")
+                        {
+                            Console.WriteLine("Correct, press enter to continue to next question");
+                            Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("That is incorrect, press enter to try again");
+                            Console.ReadLine();
+                            QUE1();
+
+                        }
+
+                    }
+                    Console.Clear();
+                    Console.WriteLine("Question 2");
+                    Console.WriteLine("What does Talofa mean in English?");
+                    Console.WriteLine("A. Goodbye");
+                    Console.WriteLine("B. Hello");
+                    string Q2 = Console.ReadLine();
+                    Q2 = Q2.ToLower();
+
+                    do
+                    {
+                        Console.WriteLine("That is Correct, lets move onto the final question of this quiz");
+                    }
+                    while (Q2 == "b");
                 }
 
 

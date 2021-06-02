@@ -54,6 +54,10 @@ namespace EnglishToSamoan
 
             static void TWO()
             {
+               /* string[] words;
+                words = new string[] {"Lelei", "Manaia", "Aso" };
+                Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " and " + words[1]);
+                Console.ReadLine();*/
                 
             }
 
@@ -73,7 +77,8 @@ namespace EnglishToSamoan
 
                 if (talofa == "talofa")
                 {
-                    Console.WriteLine("Nice job we will now move onto the next word to learn.");   
+                    Console.WriteLine("Nice job we will now move onto the next word to learn.");
+                    Console.ReadLine();
                 }
                else
                 {
@@ -84,7 +89,7 @@ namespace EnglishToSamoan
                 //retry method for Talofa 
                 static void retry()
                 {
-                  Console.WriteLine("Try writing 'Talofa' yourself.");
+                  
 
                     string talofa = Console.ReadLine();
                     talofa = talofa.ToLower();
@@ -171,7 +176,8 @@ namespace EnglishToSamoan
                 }
                 else
                 {
-                    Console.WriteLine("That is incorrect try again.");
+                    Console.WriteLine("That is incorrect, press enter to try again.");
+                    Console.ReadLine();
                     again();
                 }
 
@@ -253,6 +259,7 @@ namespace EnglishToSamoan
                     {
                         Console.WriteLine("Correct, press enter to continue to next question");
                         Console.ReadLine();
+                        QUE2();
                     }
                     else 
                     {
@@ -264,6 +271,12 @@ namespace EnglishToSamoan
 
                     static void QUE1()
                     {
+                        Console.Clear();
+                        Console.WriteLine("Question 1");
+                        Console.WriteLine("Which word means BOY in Samoan?");
+                        Console.WriteLine("A. Teine");
+                        Console.WriteLine("B. Tama");
+                        Console.WriteLine("Enter your answer below (A or B)");
                         string Q1 = Console.ReadLine();
                         Q1 = Q1.ToLower();
 
@@ -271,6 +284,7 @@ namespace EnglishToSamoan
                         {
                             Console.WriteLine("Correct, press enter to continue to next question");
                             Console.ReadLine();
+                            QUE2();
                         }
                         else
                         {
@@ -281,19 +295,40 @@ namespace EnglishToSamoan
                         }
 
                     }
-                    Console.Clear();
-                    Console.WriteLine("Question 2");
-                    Console.WriteLine("What does Talofa mean in English?");
-                    Console.WriteLine("A. Goodbye");
-                    Console.WriteLine("B. Hello");
-                    string Q2 = Console.ReadLine();
-                    Q2 = Q2.ToLower();
-
-                    do
+                    static void QUE2()
                     {
-                        Console.WriteLine("That is Correct, lets move onto the final question of this quiz");
+                        Console.Clear();
+                        Console.WriteLine("Question 2");
+                        Console.WriteLine("What does Talofa mean in English?");
+                        Console.WriteLine("A. Goodbye");
+                        Console.WriteLine("B. Hello");
+                        string Q2 = Console.ReadLine();
+                        Q2 = Q2.ToLower();
+
+                        do
+                        {
+                            Console.WriteLine("That is Correct, lets move onto the final question of this quiz");
+                            Console.WriteLine("PRESS ENTER TO CONTINUE");
+                            Console.ReadLine();
+                            QUE3();
+                        }
+                        while (Q2 == "b");
+
+                        while (Q2 == "a")
+                        {
+                            Console.WriteLine("That is incorrect, press enter to try again");
+                            Console.ReadLine();
+                            QUE2();
+
+
+                        }
                     }
-                    while (Q2 == "b");
+
+                    static void QUE3()
+                    {
+                        Console.WriteLine("Hello world");
+                    }
+
                 }
 
 

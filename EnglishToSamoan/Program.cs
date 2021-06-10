@@ -10,32 +10,45 @@ namespace EnglishToSamoan
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Welcome to the Samoan tutorial");
-            Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language, and then press enter to continue");
-
-            int answer;
-            int.TryParse(Console.ReadLine(), out answer);
-
-            switch (answer)
+            start();
+            static void start()
             {
-                case 5:
-                    LVLFIVE L5 = new LVLFIVE();
-                    break;
-                case 4:
-                   LVLFOUR L4 = new LVLFOUR();
-                    break;
-                case 3:
-                    LVLTHREE L3 = new LVLTHREE();
-                    break;
-                case 2:
-                    LVLTWO L2 = new LVLTWO();
-                    break;
-                case 1:
-                    LVLONE L1 = new LVLONE();
-                    break;
-                    
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Clear();
+                DateTime now = DateTime.Now;
+                Console.WriteLine(now.ToString());
+                Console.WriteLine("Welcome to the Samoan tutorial");
+                Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language, and then press enter to continue");
 
+                int answer;
+                int.TryParse(Console.ReadLine(), out answer);
+                if (answer == 1)
+                {
+                    LVLONE L1 = new LVLONE();
+                }
+                else if(answer == 2)
+                {
+                    LVLTWO L2 = new LVLTWO();
+                }
+                else if (answer == 3)
+                {
+                    LVLTHREE L3 = new LVLTHREE();
+                }
+                else if (answer == 4)
+                {
+                    LVLFOUR L4 = new LVLFOUR();
+                }
+                else if (answer == 5)
+                {
+                    LVLFIVE L5 = new LVLFIVE();
+                }
+                else
+                {
+                    Console.WriteLine("That is an invalid input");
+                    Console.WriteLine("Press enter to pick again");
+                    Console.ReadLine();
+                    start();
+                }
             }
                 
 

@@ -8,7 +8,9 @@ namespace EnglishToSamoan
     {
         public LVLONE()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             //welcomes user to tutorial 1
             Console.WriteLine("Welcome to level 1/5 of the Samoan tutorial");
             Console.WriteLine("In this tutorial you will be learning simple Samoan words");
@@ -97,6 +99,8 @@ namespace EnglishToSamoan
                 if (tofa == "tofa")
                 {
                     Console.WriteLine("Nice job we will now move onto the next word to learn is Tama and Teine.");
+                    Console.WriteLine("Press enter to continue.");
+                    Console.ReadLine();
 
                 }
                 else
@@ -288,16 +292,73 @@ namespace EnglishToSamoan
 
                     if (good == "a")
                     {
-                        Console.WriteLine("Congratualtions, you can now move onto the next tutorial.");
-                        Console.WriteLine("Press enter to continue to the next tutorial.");
+                        Console.WriteLine("Congratualtions");
+                        Console.WriteLine("Press enter to continue");
                         Console.ReadLine();
-                        TWO();
+                        WordsLearnt();
                     }
                     else
                     {
                         Console.WriteLine("That is incorrect, press enter to try again.");
                         Console.ReadLine();
                         QUE3();
+                    }
+                    static void WordsLearnt()
+                    {
+                        Console.Clear();
+                        Console.WriteLine("These are the new words that you have learnt today.");
+                        List<string> words = new List<string>() { "Talofa", "Tofa", "Tama", "Teine" };
+                        Console.WriteLine(words[0] + " = 'Hello'");
+                        Console.WriteLine(words[1] + " = 'Goodbye'");
+                        Console.WriteLine(words[2] + " = 'Boy or Dad'");
+                        Console.WriteLine(words[3] + " = 'Girl or Mum'");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        choice();
+                        static void choice()
+                        {
+                            Console.Clear();
+                            Console.WriteLine("You have official finished Tutorial 1/5 of the Samoan tutorials point");
+                            Console.WriteLine("Type yes if you want to carry onto the next tutorial.");
+                            Console.WriteLine("Or no to leave Samoan Tutorials Point.");
+                            Console.WriteLine("Press enter after making your choice.");
+                            string answer = Console.ReadLine();
+                            answer = answer.ToLower();
+
+                            if (answer == "Yes")
+                            {
+                                LVLTWO L2 = new LVLTWO();
+                            }
+                            else if (answer == "no")
+                            {
+                                Console.Read();
+                            }
+                            else
+                            {
+                                choice2();                                
+                            }
+
+                            static void choice2()
+                            {
+                                Console.WriteLine("That is an invalid input");
+                                Console.WriteLine("Type 'yes' to move onto next tutorial or 'no' to leave Samoan Tutorials Point.");
+                                string answer2 = Console.ReadLine();
+                                answer2 = answer2.ToLower();
+                                if (answer2 == "yes")
+                                {
+                                    LVLTWO L2 = new LVLTWO();
+                                }
+                                else if (answer2 == "no")
+                                {
+                                    Console.ReadLine();
+                                }
+                                else
+                                {
+                                    choice2();
+                                }
+                            }
+                        }
+
                     }
                 }
             }

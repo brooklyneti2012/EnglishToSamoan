@@ -8,14 +8,17 @@ namespace EnglishToSamoan
     {
         public LVLTWO()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
 
             Console.Clear();
             Console.WriteLine("Welcome to Leve 2/5 of the Samoan Tutorial");
             Console.WriteLine("We will be learning some ways of how to say 'Good' and 'Bad', and ways to say 'Sorry' and 'Please' in Samoan");
             Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
             string[] words;
             words = new string[] { "Lelei", "Manaia" };
-            Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " and " + words[1]);
+            Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " (Leh - Lay) and " + words[1] + " (Mah - Neye - Ya)");
+            Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("try typing Lelei.");
@@ -55,7 +58,11 @@ namespace EnglishToSamoan
             }
 
             Console.Clear();
-            Console.WriteLine("The way that we say 'Bad' in Samoan");
+            Console.WriteLine("The way that we say 'Bad' in Samoan is 'Leaga' (Leh - ya - nga)");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("Try typing 'Leaga' yourself");
         }
     }
 }

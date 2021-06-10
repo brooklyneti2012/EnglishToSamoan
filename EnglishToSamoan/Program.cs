@@ -20,7 +20,7 @@ namespace EnglishToSamoan
             switch (answer)
             {
                 case 5:
-                    ();
+                    LVLFIVE L5 = new LVLFIVE();
                     break;
                 case 4:
                    LVLFOUR L4 = new LVLFOUR();

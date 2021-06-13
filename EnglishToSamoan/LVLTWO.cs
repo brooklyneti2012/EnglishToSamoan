@@ -63,6 +63,31 @@ namespace EnglishToSamoan
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("Try typing 'Leaga' yourself");
+            string leaga = Console.ReadLine().ToLower();
+            ain();
+
+            static void ain()
+            {
+                string input = "Leaga";
+                string spaces = " that is correct press enter to continue";
+                for (int i = 0; i < input.Length; i++)
+                {
+                    if (input == "leaga")
+                    {
+                        Console.WriteLine("That is correct");
+                    }
+                }
+                Console.WriteLine("LEAGA = " + spaces);
+                Console.ReadLine();
+                Q3();
+            }
+            static void Q3()
+            {
+
+            }
         }
+
+          
     }
 }
+

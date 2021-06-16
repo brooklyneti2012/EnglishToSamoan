@@ -30,6 +30,7 @@ namespace EnglishToSamoan
             {
                 Console.Clear();
                 Console.WriteLine("Nice job :), press enter to continue ");
+                Console.ReadLine();
             }
             else
             {
@@ -63,6 +64,8 @@ namespace EnglishToSamoan
             Console.WriteLine("The way that we say 'Bad' in Samoan is 'Leaga' (Leh - ya - nga)");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+            ain();
+            
 
             static void ain()
             {
@@ -73,30 +76,61 @@ namespace EnglishToSamoan
                 
 
                 
-                string spaces = " that is correct press enter to continue";
-                for (int i = 0; i < leaga.Length; i++)
+                string spaces = " correct press enter to continue";
+                for (int i = 0; i > leaga.Length; i++)
                 {
                     if (leaga == "leaga")
                     {
-                        Console.WriteLine("That is correct");
+                        
                     }
                     else
                     {
-                        Console.WriteLine("That is incorrect, press enter to try again");
+                        Console.WriteLine("That is incorrect, press enter to try again.");
                         Console.ReadLine();
                         ain();
                     }
                 }
-                Console.WriteLine("LEAGA =" + spaces);
+                Console.WriteLine("your answer was" + spaces);
                 Console.ReadLine();
                 Q3();
             }
             static void Q3()
             {
+                Console.Clear();
                 Console.WriteLine("You will now learn how to say please");
                 Console.WriteLine("Please in Samoan is 'Fa'amolemole' (Fah - ah - moh - leh - moh - leh)");
                 Console.WriteLine("press any key to continue");
                 Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("Try typing 'Fa'amolemole' yourself.");
+                Console.WriteLine("Press enter when you're done with your answer.");
+                string please = Console.ReadLine();
+                please = please.ToLower();
+
+
+                for (please = "fa'amolemole";  ;)
+                {
+                    Console.WriteLine("that is correct press enter to continue.");
+                    Console.ReadLine();
+                    sorry();
+                    break;                    
+                }                                                                     
+
+            }
+            static void sorry()
+            {
+                Console.WriteLine("We will now learn how to say sorry.");
+                Console.WriteLine("press enter to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                Console.WriteLine("The common way to say 'Sorry' in Samoan is 'Malie' (mah - lee - ye)");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("Try typing Malie yourself");
+                string malie = Console.ReadLine();
+
+                
             }
         }
 

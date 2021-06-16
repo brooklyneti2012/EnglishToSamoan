@@ -318,14 +318,14 @@ namespace EnglishToSamoan
                         static void choice()
                         {
                             Console.Clear();
-                            Console.WriteLine("You have official finished Tutorial 1/5 of the Samoan tutorials point");
+                            Console.WriteLine("You have officially finished Tutorial 1/5 of the Samoan tutorials point");
                             Console.WriteLine("Type yes if you want to carry onto the next tutorial.");
                             Console.WriteLine("Or no to leave Samoan Tutorials Point.");
                             Console.WriteLine("Press enter after making your choice.");
                             string answer = Console.ReadLine();
                             answer = answer.ToLower();
 
-                            if (answer == "Yes")
+                            if (answer == "yes")
                             {
                                 LVLTWO L2 = new LVLTWO();
                             }

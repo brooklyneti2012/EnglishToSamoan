@@ -126,15 +126,50 @@ namespace EnglishToSamoan
                 Console.WriteLine("The common way to say 'Sorry' in Samoan is 'Malie' (mah - lee - ye)");
                 Console.WriteLine("Press enter to continue.");
                 Console.ReadKey();
-                Console.Clear();
-                Console.WriteLine("Try typing Malie yourself");
-                string malie = Console.ReadLine();
+                sorry2();
+
+                static void sorry2()
+                {
+                    Console.Clear();
+                    
+                    Console.Clear();
+                    Console.WriteLine("Try typing Malie yourself");
+                    string malie = Console.ReadLine();
+
+                    while (malie == "malie")
+                    {
+                        if (malie == "malie")
+                        {
+                            Console.WriteLine("That is correct press enter to continue to the end of tutorial quiz");
+                            Console.ReadLine();
+                            TWOQUIZ T1 = new TWOQUIZ();
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("that is incorrect, press enter to try again");
+                            Console.ReadLine();
+                            sorry2();
+                            break;
+                        }
+
+                    }
+                }
 
                 
             }
-        }
+            
+                 
+               
 
-          
+
+
+        }
+                
     }
 }
+
+          
+    
+
 

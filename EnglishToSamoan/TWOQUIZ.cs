@@ -8,6 +8,7 @@ namespace EnglishToSamoan
     {
         public TWOQUIZ()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("welcome to the end of tutorial quiz for tutorial 2/5");
             Console.WriteLine("you will be asked questions about what you have learnt in this tutorial");

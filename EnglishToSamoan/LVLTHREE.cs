@@ -11,11 +11,12 @@ namespace EnglishToSamoan
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
             Console.WriteLine("Welcome to level 3/5 of the Samoan Tutorials Point.");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("In this tutorial you will be learning how to say the days of the week");
             Console.WriteLine("Hint: 'Aso' means 'Day'.");
             Console.WriteLine("Press enter to continue");
             Console.ReadLine();
-
+            
             Console.Clear();
             Console.WriteLine("To say 'Monday' in Samoan we say 'Aso Gafua'");
             Console.WriteLine("Pronounciation: (Ah - soh, Nga - Foo - Wah)");
@@ -34,17 +35,19 @@ namespace EnglishToSamoan
 
                 if (monday == "aso gafua")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That is incorrect press enter to try again");
                     Console.ReadLine();
                     Monday();
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Tuesday' is 'Aso Lua'");
             Console.WriteLine("Pronounciation: (Ah - soh, loo - wah)");
@@ -62,16 +65,19 @@ namespace EnglishToSamoan
 
                 if (tuesday == "aso lua")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Tuesday();
                 }
             }
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Wednesday' is 'Aso Lulu'");
@@ -82,6 +88,7 @@ namespace EnglishToSamoan
 
             static void Wednesday()
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 Console.WriteLine("Q3. wednesday");
                 Console.WriteLine("Try typing Aso Lulu yourself");
@@ -90,17 +97,19 @@ namespace EnglishToSamoan
 
                 if (wednesday == "aso lulu")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Wednesday();
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Thursday' is 'Aso tofi'");
             Console.WriteLine("Pronounciation: (Ah - soh, Toh - fee)");
@@ -118,17 +127,19 @@ namespace EnglishToSamoan
 
                 if (thursday == "aso tofi")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Thursday();
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Friday' is 'Aso faraile'");
             Console.WriteLine("Pronounciation: (Ah - soh, fah - ry - leh)");
@@ -146,17 +157,19 @@ namespace EnglishToSamoan
 
                 if (friday == "aso faraile")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Thursday();
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Saturday' is 'Aso tofi'");
             Console.WriteLine("Pronounciation: (Ah - soh, Toh - fee)");
@@ -174,17 +187,19 @@ namespace EnglishToSamoan
 
                 if (saturday == "aso tona'i" && saturday == "aso tonai")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Saturday();
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("The Samoan way to say 'Saturday' is 'Aso Sa'");
             Console.WriteLine("Pronounciation: (Ah - soh, Sah)");
@@ -202,12 +217,14 @@ namespace EnglishToSamoan
 
                 if (sunday == "aso sa")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue to the end of tutorial quiz");
                     Console.ReadLine();
                     THREEQUIZ Q3 = new THREEQUIZ();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That was incorrect, press enter to try again.");
                     Console.ReadLine();
                     Sunday();

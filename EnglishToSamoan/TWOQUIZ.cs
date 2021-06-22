@@ -8,6 +8,7 @@ namespace EnglishToSamoan
     {
         public TWOQUIZ()
         {
+            Console.Title = "Quiz 2";
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("welcome to the end of tutorial quiz for tutorial 2/5");
@@ -68,7 +69,7 @@ namespace EnglishToSamoan
                 string lelei1 = Console.ReadLine();
                 lelei1 = lelei1.ToLower();
 
-                if (lelei1 == "lelei" && lelei1 == "manaia")
+                if (lelei1 == "lelei")
                 {
                     Console.WriteLine("That is correct, press enter to continue.");
                     Console.ReadLine();
@@ -88,7 +89,7 @@ namespace EnglishToSamoan
                     {
                         hint1();
                     }
-                    else
+                    else 
                     {
                         Q2();
                     }

@@ -8,9 +8,9 @@ namespace EnglishToSamoan
     {
         public LVLONE()
         {
-
+            Console.Title = "Level one";
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
             //welcomes user to tutorial 1
             Console.WriteLine("Welcome to level 1/5 of the Samoan tutorial");
             Console.WriteLine("In this tutorial you will be learning simple Samoan words");

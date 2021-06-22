@@ -8,6 +8,7 @@ namespace EnglishToSamoan
     {
         public LVLTHREE()
         {
+            Console.Title = "Level 3";
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
             Console.WriteLine("Welcome to level 3/5 of the Samoan Tutorials Point.");

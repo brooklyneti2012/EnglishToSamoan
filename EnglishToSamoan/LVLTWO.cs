@@ -8,6 +8,7 @@ namespace EnglishToSamoan
     {
         public LVLTWO()
         {
+            Console.Title = "Level 2";
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             Console.Clear();
@@ -18,6 +19,7 @@ namespace EnglishToSamoan
             Console.ReadLine();
             string[] words;
             words = new string[] { "Lelei", "Manaia" };
+            Console.Clear();
             Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " (Leh - Lay) and " + words[1] + " (Mah - Neye - Ya)");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
@@ -29,8 +31,7 @@ namespace EnglishToSamoan
 
             if (good1 == "lelei")
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;                
                 Console.WriteLine("Nice job :), press enter to continue ");
                 Console.ReadLine();
             }
@@ -50,7 +51,7 @@ namespace EnglishToSamoan
                 string good1 = Console.ReadLine();
                 good1 = good1.ToLower();
 
-                if (good1 == "lelei")
+                if (good1 == "lelei" || good1 == "manaia")
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Clear();

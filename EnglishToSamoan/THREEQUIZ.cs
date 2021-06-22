@@ -8,6 +8,7 @@ namespace EnglishToSamoan
     {
         public THREEQUIZ()
         {
+            Console.Title = "Quiz 3";
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Welcome to the end of tutorial 3 quiz");
             Console.WriteLine("There will be 7 qusetions");
@@ -20,7 +21,7 @@ namespace EnglishToSamoan
             static void Q1()
             {
                 Console.WriteLine("Q1, multichoice");
-                Console.WriteLine("Which of the following answers mean Monday in Samoan");
+                Console.WriteLine("Which of the following answers stands for Monday in Samoan?");
                 Console.WriteLine("A. Aso Gafua");
                 Console.WriteLine("B. Aso Lulu");
                 Console.WriteLine("C. Aso Lua");
@@ -68,7 +69,7 @@ namespace EnglishToSamoan
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 Console.WriteLine("Q2. Written answer");
-                Console.WriteLine("Type the definition of the word 'Tuesday' in Samoan");
+                Console.WriteLine("Type the definition of the word 'Tuesday' in Samoan?");
                 string answer = Console.ReadLine();
                 answer = answer.ToLower();
 
@@ -84,7 +85,7 @@ namespace EnglishToSamoan
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That is incorrect");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Do you want a hint");
+                    Console.WriteLine("Do you want a hint?");
                     Console.WriteLine("Type yes or no, then press enter to continue");
                     string hint1 = Console.ReadLine();
                     hint1 = hint1.ToLower();
@@ -96,7 +97,8 @@ namespace EnglishToSamoan
                     else if (hint1 == "no")
                     {
                         Q2();
-                    }                    
+                    }
+                    
                 }
             }
 
@@ -118,7 +120,7 @@ namespace EnglishToSamoan
             {
                 Console.Clear();
                 Console.WriteLine("Q3. Multichoice");
-                Console.WriteLine("Which of the following is the definition of 'Aso sa'");
+                Console.WriteLine("Which of the following is the definition of 'Aso sa'?");
                 Console.WriteLine("A. Saturday");
                 Console.WriteLine("B. Friday");
                 Console.WriteLine("C. Sunday");
@@ -168,57 +170,66 @@ namespace EnglishToSamoan
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 Console.WriteLine("Q4. Written answer");
-                Console.WriteLine("Type the Samoan definition of 'Wednesday'");
+                Console.WriteLine("Type the Samoan definition of 'Wednesday'?");
                 Console.WriteLine("Press enter after typing your answer");
                 string Q4answer = Console.ReadLine();
                 Q4answer = Q4answer.ToLower();
 
                 do
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("INPUT: " + Q4answer + " that is correct");
                     Console.WriteLine("press enter to continue");
                     Console.ReadLine();
+                    Q5();
                     break;
                 } while (Q4answer == "aso lulu");
 
                 if (Q4answer == "aso gafua")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else if (Q4answer == "aso lua")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else if (Q4answer == "aso tofi")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else if (Q4answer == "aso faraile")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else if (Q4answer == "aso tonai" && Q4answer == "aso tona'i")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else if (Q4answer == "aso sa")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("INPUT: " + Q4answer + " that is incorrect, press enter to try again");
                     Console.ReadLine();
                     Q4();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("That is an invalid input, press enter to try again.");
                     Console.ReadLine();
                     Q4();
@@ -226,7 +237,156 @@ namespace EnglishToSamoan
             }
             static void Q5()
             {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Clear();
                 Console.WriteLine("Q5. Multichoice");
+                Console.WriteLine("Which of the following is the definition of 'Aso Tona'i'?");
+                Console.WriteLine("A. Sunday");
+                Console.WriteLine("B. Saturday");
+                Console.WriteLine("C. Thursady");
+                Console.WriteLine("D. Monday");
+                Console.WriteLine("Type a letter out of A, B, C, D, then press enter to confirm your answer.");
+                string answer = Console.ReadLine();
+                answer = answer.ToLower();
+
+                while (answer ==  "b")
+                {                    
+                    Console.WriteLine("INPUT " + answer);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("That is correct.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("press enter to consintue");
+                    Console.ReadLine();
+                    Q6();
+                    break;
+                }
+
+                if (answer == "a")
+                {
+                    Console.WriteLine("INPUT " + answer);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is inccorect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Q4();
+                }
+                else if (answer == "c")
+                {
+                    Console.WriteLine("INPUT " + answer);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is inccorect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Q4();
+                }
+                else if (answer == "d")
+                {
+                    Console.WriteLine("INPUT " + answer);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is inccorect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Q4();
+                }
+                else
+                {
+                    Console.WriteLine(answer + " is an invalid input");
+                    Console.WriteLine("Press enter to try again");
+                    Q4();
+                }
+            }
+            static void Q6()
+            {
+                Console.ResetColor();
+                Console.Clear();
+                Console.WriteLine("Q6. Written answer");
+                Console.WriteLine("How do you write thursday in Samoan?");
+                Console.WriteLine("Press enter after typing your answer.");
+                string thursday = Console.ReadLine();
+                thursday = thursday.ToLower();
+
+
+                switch(thursday)
+                {
+                    case "aso tofi":
+                        Console.WriteLine("INPUT " + thursday);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("That is correct");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        Q7();
+                        break;                    
+                }
+                if (thursday == "aso gafua")
+                {
+                    Console.WriteLine("INPUT " + thursday);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ResetColor();
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else if (thursday == "aso lua")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else if (thursday == "aso lulu")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else if (thursday == "aso sa")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else if (thursday == "aso tonai")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else if (thursday == "aso faraile")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+                else
+                {
+                    Console.WriteLine("That is an invalid input.");
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q6();
+                }
+            }
+            static void Q7()
+            {
+                Console.Clear();
+                Console.WriteLine("Q7. Multichoice");
+                Console.WriteLine("Which of the following stands for 'Friday' in Samoan.");
+                
             }
         }
     }

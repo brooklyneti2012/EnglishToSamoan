@@ -17,6 +17,7 @@ namespace EnglishToSamoan
                 Console.Clear();
                 DateTime now = DateTime.Now;
                 Console.WriteLine("You have started at " + now.ToString());
+                Console.Title = "Samoan Tutorials Point";
                 Console.WriteLine("Welcome to the Samoan tutorial");
                 Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language, and then press enter to continue");
 

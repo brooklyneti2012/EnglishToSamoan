@@ -12,7 +12,7 @@ namespace EnglishToSamoan
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             Console.Clear();
-            Console.WriteLine("Welcome to Leve 2/5 of the Samoan Tutorial");
+            Console.WriteLine("Welcome to Tutorial 2/5 of the Samoan Tutorial");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("We will be learning some ways of how to say 'Good' and 'Bad', and ways to say 'Sorry' and 'Please' in Samoan");
             Console.WriteLine("Press enter to continue.");
@@ -20,6 +20,7 @@ namespace EnglishToSamoan
             string[] words;
             words = new string[] { "Lelei", "Manaia" };
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " (Leh - Lay) and " + words[1] + " (Mah - Neye - Ya)");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();

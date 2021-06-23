@@ -11,7 +11,7 @@ namespace EnglishToSamoan
             Console.Title = "Level 3";
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
-            Console.WriteLine("Welcome to level 3/5 of the Samoan Tutorials Point.");
+            Console.WriteLine("Welcome to Tutorial 3/5 of the Samoan Tutorials Point.");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("In this tutorial you will be learning how to say the days of the week");
             Console.WriteLine("Hint: 'Aso' means 'Day'.");
@@ -28,6 +28,7 @@ namespace EnglishToSamoan
             static void Monday()
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Q1. Monday");
                 Console.WriteLine("ASO GAFUA");
                 Console.WriteLine("Try typing 'Aso Gafua' yourself");
@@ -58,6 +59,7 @@ namespace EnglishToSamoan
 
             static void Tuesday()
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 Console.WriteLine("Q2. tuesday");
                 Console.WriteLine("Try typing Aso Lua yourself");

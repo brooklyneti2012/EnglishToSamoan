@@ -385,8 +385,91 @@ namespace EnglishToSamoan
             {
                 Console.Clear();
                 Console.WriteLine("Q7. Multichoice");
-                Console.WriteLine("Which of the following stands for 'Friday' in Samoan.");
+                Console.WriteLine("Which of the following stands for 'Friday' in Samoan?");
+                Console.WriteLine("A. Aso Sa");
+                Console.WriteLine("B. Aso Gafua");
+                Console.WriteLine("C. Aso Faraile");
+                Console.WriteLine("D. Aso Tona'i");
+                Console.WriteLine("Type a letter as your answer and press enter after making your choice.");
+                string c = Console.ReadLine();
+                c = c.ToLower();
+
+                if (c == "c")
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("INPUT: " + c + " that is correct.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to continue.");
+                    Console.ReadLine();
+                    learnt();
+                }
+                else if (c == "a" || c == "b" || c =="d")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("INPUT: " + c + " that is incorrect.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q7();
+                }
+                else
+                {
+                    Console.WriteLine("INPUT: " + c + "that is an invalid input.");
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q7();
+                }
                 
+            }
+
+            static void learnt()
+            {
+                DateTime now = DateTime.Now;
+                Console.WriteLine("You have Finished level 3 at " + now.ToString());
+                Console.WriteLine("Today you have learnt these words.");
+                string[] learn;
+                learn = new string[] {"Aso Gafua", "Aso Lua", "Aso Lulu", "Aso Tofi", "Aso Faraile", "Aso Tona'i", "Aso Sa" };
+                Console.WriteLine(learn[0] + " = Monday");
+                Console.WriteLine(learn[1] + " = Tuesday");
+                Console.WriteLine(learn[2] + " = Wednesday");
+                Console.WriteLine(learn[3] + " = Thursday");
+                Console.WriteLine(learn[4] + " = Friday");
+                Console.WriteLine(learn[5] + " = Saturday");
+                Console.WriteLine(learn[6] + " = Sunday");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+                done();
+
+                static void done()
+                {
+                    Console.WriteLine("You have official finished 'Level 3' of the Samoan Tutorials Point.");
+                    Console.WriteLine("Type 'yes' to continue to the next tutorial.");
+                    Console.WriteLine("Or type 'no' if you wish to exit Samoan Tutorials point.");
+                    Console.WriteLine("Or if you want to pick another level, type 'menu' to go to the main menu");
+                    Console.WriteLine("Press enter after making your choice");
+                    string CarryOn = Console.ReadLine();
+                    CarryOn = CarryOn.ToLower();
+
+                    if (CarryOn == "yes")
+                    {
+                        LVLFOUR L4 = new LVLFOUR();
+                    }
+                    else if (CarryOn == "no")
+                    {
+                        Console.Clear();
+                    }
+                    else if (CarryOn == "menu")
+                    {
+                        Program P1 = new Program();
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is an invalid input");
+                        Console.WriteLine("Press enter.");
+                        Console.ReadLine();
+                        done();
+                    }
+                }
             }
         }
     }

@@ -209,12 +209,41 @@ namespace EnglishToSamoan
                     Console.WriteLine("Sorry = " + learnt[1]);
                     Console.WriteLine("Please = " + learnt[2]);
                     Console.WriteLine("Bad = " + learnt[3]);
-                    Console.WriteLine("Press enter to move onto the next tutorial.");
+                    Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
-                    LVLTHREE L3 = new LVLTHREE();
+                }
+                static void done()
+                {
+                    Console.WriteLine("You have official finished 'Level 2' of the Samoan Tutorials Point.");
+                    Console.WriteLine("Type 'yes' to continue to the next tutorial.");
+                    Console.WriteLine("Or type 'no' if you wish to exit Samoan Tutorials point.");
+                    Console.WriteLine("Or if you want to pick another level, type 'menu' to go to the main menu");
+                    Console.WriteLine("Press enter after making your choice");
+                    string CarryOn = Console.ReadLine();
+                    CarryOn = CarryOn.ToLower();
+
+                    if (CarryOn == "yes")
+                    {
+                        LVLFOUR L4 = new LVLFOUR();
+                    }
+                    else if (CarryOn == "no")
+                    {
+                        Console.Clear();
+                    }
+                    else if (CarryOn == "menu")
+                    {
+                        Program P1 = new Program();
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is an invalid input");
+                        Console.WriteLine("Press enter.");
+                        Console.ReadLine();
+                        done();
+                    }
                 }
 
-               
+
 
             }
         }

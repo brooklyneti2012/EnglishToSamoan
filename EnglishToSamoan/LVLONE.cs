@@ -12,7 +12,7 @@ namespace EnglishToSamoan
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             //welcomes user to tutorial 1
-            Console.WriteLine("Welcome to level 1/5 of the Samoan tutorial");
+            Console.WriteLine("Welcome to Tutorial 1/5 of the Samoan tutorial");
             Console.WriteLine("In this tutorial you will be learning simple Samoan words");
             Console.WriteLine("Press ENTER to continue");
             Console.ReadLine();

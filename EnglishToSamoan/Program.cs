@@ -11,7 +11,7 @@ namespace EnglishToSamoan
         static void Main(string[] args)
         {
             start();
-            static void start()
+            static void start() 
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();

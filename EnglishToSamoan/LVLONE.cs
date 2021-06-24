@@ -36,7 +36,7 @@ namespace EnglishToSamoan
             }
 
             //retry method for Talofa 
-            static void retry()
+             static void retry()
             {
 
 
@@ -277,6 +277,13 @@ namespace EnglishToSamoan
 
 
                             break;
+                    }
+                    if (Q2 != "a" || Q2 != "b")
+                    {
+                        Console.WriteLine("That is an invalid input.");
+                        Console.WriteLine("Press enter to try again.");
+                        Console.ReadLine();
+                        QUE2();
                     }
                 }
 

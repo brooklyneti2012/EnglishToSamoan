@@ -25,7 +25,7 @@ namespace EnglishToSamoan
                 int.TryParse(Console.ReadLine(), out answer);
                 if (answer == 1)
                 {
-                    LVLONE L1 = new LVLONE();
+                    LVLONE L1 = new LVLONE();                  
                 }
                 else if(answer == 2)
                 {

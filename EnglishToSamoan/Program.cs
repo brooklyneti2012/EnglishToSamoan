@@ -12,7 +12,7 @@ namespace EnglishToSamoan
         {
             start();
             static void start() 
-            {
+            {              
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 DateTime now = DateTime.Now;

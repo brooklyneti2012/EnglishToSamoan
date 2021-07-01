@@ -104,7 +104,9 @@ namespace EnglishToSamoan
                     Console.Clear();
                     Console.WriteLine("So far you have learnt the words...");
                     string[] words;
-                    words = new string[] {"Tasi", "Lua" };
+                    words = new string[] {"Tasi", "Lua", "tolu", "fa", "Lima", "Ono", "fitu", "Valu", "Iva", "Sefulu" };
+                    string[] RightOrWrong;
+                    RightOrWrong = new string[] {"That is correct :)", "That is incorrect :(" };
                     Console.WriteLine(words[0] + " and " + words[1]);
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
@@ -114,12 +116,58 @@ namespace EnglishToSamoan
                     Console.WriteLine("We say 'Tolu' (Toh - loo)");
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
-                    TH3();
-                }
-                static void TH3 ()
-                {
+                    Console.Clear();
+                    Console.WriteLine("Try typing '" + words[2] + "' yourself");
+                    string three = Console.ReadLine();
+                    three = three.ToLower();
 
+                   /* do
+                    {
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(RightOrWrong[0]);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Press enter to coninue.");
+                        Console.ReadLine();
+                        break;
+                    } while (three == "tolu");*/
+
+                    while (three == "tolu")
+                    {
+                        Console.WriteLine("INPUT: " + three);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(RightOrWrong[0]);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                        break;
+                    }
+                    while (three != "tolu")
+                    {
+                        Console.WriteLine("INPUT: " + three);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("That is incorrect :(");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                        break;
+                    }
+                    Console.Clear();
+                    Console.WriteLine("In Samoan, To say the Number 4");
+                    Console.WriteLine("We say 'Fa'");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("How do you say the number 4 in Samoan.");
+                    Console.WriteLine("ps. this is really easy.");
+                    string four = Console.ReadLine();
+                    four = four.ToLower();
+
+                    if (four == "fa")
+                        Console.WriteLine("CORRECT");
+                        Console.WriteLine("WOOOOOW, that was really easy wasn't it?");
                 }
+                
             }
         }
     }

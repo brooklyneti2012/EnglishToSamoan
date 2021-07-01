@@ -8,7 +8,7 @@ namespace EnglishToSamoan
     {
         public LVLFIVE()
         {
-            Console.Title = "Level 5";
+
         }
     }
 }

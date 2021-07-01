@@ -114,6 +114,11 @@ namespace EnglishToSamoan
                     Console.WriteLine("We say 'Tolu' (Toh - loo)");
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
+                    TH3();
+                }
+                static void TH3 ()
+                {
+
                 }
             }
         }

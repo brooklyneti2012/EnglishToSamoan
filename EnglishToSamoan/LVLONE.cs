@@ -19,21 +19,8 @@ namespace EnglishToSamoan
             Console.Clear();
             Console.WriteLine("The greeting used most in the Samoan language is 'Talofa'(tah - loh - fah)");
             Console.WriteLine("");
-            Console.WriteLine("Try writing 'Talofa' yourself.");
-            string talofa = Console.ReadLine();
-
-            talofa = talofa.ToLower();
-
-            if (talofa == "talofa")
-            {
-                Console.WriteLine("Nice job we will now move onto the next word to learn.");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("That is incorrect, try again.");
-                retry();
-            }
+            Console.WriteLine("Try writing 'Talofa' yourself.");          
+            retry();
 
             //retry method for Talofa 
              static void retry()
@@ -52,8 +39,7 @@ namespace EnglishToSamoan
                 }
                 else
                 {
-                    Console.WriteLine("That is incorrect, try again.");
-                    Console.WriteLine("PRESS ENTER TO TRY AGAIN");
+                    Console.WriteLine("That is incorrect, press enter to try again.");
                     retry();
                 }
 
@@ -65,29 +51,11 @@ namespace EnglishToSamoan
 
             Console.Clear();
             Console.WriteLine("The next word we will try to learn is Goodbye");
-            Console.WriteLine("press any key to continue");
-            Console.ReadLine();
+            Console.WriteLine("press enter to continue");
+            Console.ReadKey();
             Console.WriteLine("The Samoan way to say Goodbye is 'Tofa' (toh - fah)");
             Console.WriteLine("Try typing 'Tofa' yourself");
-
-            string tofa = Console.ReadLine();
-            tofa = tofa.ToLower();
-
-            if (tofa == "tofa")
-            {
-                Console.WriteLine("Nice job our next word we will be learning is Tama and Teine");
-                Console.WriteLine("PRESS ENTER TO CONTINUE.");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Ooh, try again remeber the word is 'TOFA' ");
-                Console.WriteLine("PRESS ENTER TO TRY AGAIN");
-                tryagain();
-            }
-
-
-
+            tryagain();
             //retry method for TOFA 
             static void tryagain()
             {
@@ -121,21 +89,7 @@ namespace EnglishToSamoan
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Try typing 'TAMA' yourself");
-            string tama = Console.ReadLine();
-            tama = tama.ToLower();
-
-            if (tama == "tama")
-            {
-                Console.WriteLine("Congrats we will now move onto teine.");
-                Console.WriteLine("PRESS ENTER TO CONTINUE");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("That is incorrect, press enter to try again.");
-                Console.ReadLine();
-                again();
-            }
+            again();
 
             static void again()
             {
@@ -159,21 +113,7 @@ namespace EnglishToSamoan
             Console.Clear();
 
             Console.WriteLine("Try typing Teine yourself");
-            string teine = Console.ReadLine();
-            teine = teine.ToLower();
-
-            if (teine == "teine")
-            {
-                Console.WriteLine("Nice job, we will now move onto the End Of Tutorial Quiz");
-                Console.WriteLine("Press enter to continue.");
-                Console.ReadLine();
-                quiz();
-            }
-            else
-            {
-                Console.WriteLine("That was incorrect, try again");
-                AGAIN();
-            }
+            AGAIN();
 
             static void AGAIN()
             {

@@ -23,6 +23,7 @@ namespace EnglishToSamoan
 
                 int answer;
                 int.TryParse(Console.ReadLine(), out answer);
+                //the program will take you to the specific level according to your input
                 if (answer == 1)
                 {
                     LVLONE L1 = new LVLONE();                  

@@ -161,6 +161,7 @@ namespace EnglishToSamoan
                     
                     Console.Clear();
                     Console.WriteLine("Try typing Malie yourself");
+                    Console.WriteLine("Press enter after typing your answer");
                     string malie = Console.ReadLine();
 
                     while (malie == "malie")

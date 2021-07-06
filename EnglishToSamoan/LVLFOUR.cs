@@ -8,6 +8,22 @@ namespace EnglishToSamoan
     {
         public LVLFOUR()
         {
+            static void correct()
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("That is correct :)");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+            }
+            static void incorrect()
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("That is incorrect :(");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Press enter to try again");
+                Console.ReadLine();
+            }
             Console.Title = "Level 4";
             Console.Clear();
             Console.WriteLine("Welcome to tutorial 4/5 of the Samoan Tutorials Point");
@@ -31,29 +47,21 @@ namespace EnglishToSamoan
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Try typing 'tasi' yourself");
+                    Console.WriteLine("Press enter after typing your answer");
                     string one = Console.ReadLine();
                     one = one.ToLower();
 
                     if (one == "tasi")
                     {
-                        Console.ResetColor();
                         Console.WriteLine("INPUT: " + one);
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("That is correct :)");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Press enter to continue.");
-                        Console.ReadLine();
+                        correct();                        
                         TWO();
                     }
                     else
                     {
                         Console.ResetColor();
                         Console.WriteLine("INPUT: " + one);
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("That is incorrect :(");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Press enter to try again");
-                        Console.ReadLine();
+                        incorrect();
                         ONE();
                     }
                 }
@@ -70,17 +78,14 @@ namespace EnglishToSamoan
                     {
                         Console.Clear();
                         Console.WriteLine("Try typing 'Lua' yourself.");
+                        Console.WriteLine("Press enter after typing your answer");
                         string LUA = Console.ReadLine();
                         LUA = LUA.ToLower();
 
                         while (LUA == "lua") 
                         {
                             Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("that is correct :)");
-                            Console.ResetColor();
-                            Console.WriteLine("Press enter to continue.");
-                            Console.ReadLine();
+                            correct();
                             THREE();
                             break;
                         }
@@ -88,11 +93,7 @@ namespace EnglishToSamoan
                         while (LUA != "lua") 
                         {
                             Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("That is incorrect :(");
-                            Console.ResetColor();
-                            Console.WriteLine("Press enter to try again.");
-                            Console.ReadLine();
+                            incorrect();
                             lua();
                             break;
 
@@ -104,9 +105,9 @@ namespace EnglishToSamoan
                     Console.Clear();
                     Console.WriteLine("So far you have learnt the words...");
                     string[] words;
-                    words = new string[] {"Tasi", "Lua", "tolu", "fa", "Lima", "Ono", "fitu", "Valu", "Iva", "Sefulu" };
+                    words = new string[] { "Tasi", "Lua", "tolu", "fa", "Lima", "Ono", "fitu", "Valu", "Iva", "Sefulu" };
                     string[] RightOrWrong;
-                    RightOrWrong = new string[] {"That is correct :)", "That is incorrect :(" };
+                    RightOrWrong = new string[] { "That is correct :)", "That is incorrect :(" };
                     Console.WriteLine(words[0] + " and " + words[1]);
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
@@ -118,54 +119,203 @@ namespace EnglishToSamoan
                     Console.ReadLine();
                     Console.Clear();
                     Console.WriteLine("Try typing '" + words[2] + "' yourself");
+                    Console.WriteLine("Press enter after typing your answer");
                     string three = Console.ReadLine();
                     three = three.ToLower();
-
-                   /* do
-                    {
-                        Console.WriteLine("");
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(RightOrWrong[0]);
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Press enter to coninue.");
-                        Console.ReadLine();
-                        break;
-                    } while (three == "tolu");*/
-
                     while (three == "tolu")
                     {
                         Console.WriteLine("INPUT: " + three);
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(RightOrWrong[0]);
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Press enter to continue.");
-                        Console.ReadLine();
+                        correct();
+                        fa();
                         break;
                     }
                     while (three != "tolu")
                     {
                         Console.WriteLine("INPUT: " + three);
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("That is incorrect :(");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Press enter to continue.");
-                        Console.ReadLine();
+                        incorrect();
+                        THREE();
                         break;
                     }
-                    Console.Clear();
-                    Console.WriteLine("In Samoan, To say the Number 4");
-                    Console.WriteLine("We say 'Fa'");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    Console.Clear();
-                    Console.WriteLine("How do you say the number 4 in Samoan.");
-                    Console.WriteLine("ps. this is really easy.");
-                    string four = Console.ReadLine();
-                    four = four.ToLower();
+                    static void fa()
+                    {
+                        Console.Clear();
+                        Console.WriteLine("In Samoan, To say the Number 4");
+                        Console.WriteLine("We say 'Fa'");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        Four();
+                        static void Four()
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How do you say the number 4 in Samoan.");
+                            Console.WriteLine("ps. this is really easy.");
+                            Console.WriteLine("Press enter after typing your answer");
+                            string four = Console.ReadLine();
+                            four = four.ToLower();
 
-                    if (four == "fa")
-                        Console.WriteLine("CORRECT");
-                        Console.WriteLine("WOOOOOW, that was really easy wasn't it?");
+                            if (four == "fa")
+                            {
+                                Console.WriteLine("INPUT: " + four);
+                                Console.WriteLine("CORRECT");
+                                Console.WriteLine("WOOOOOW, that was really easy wasn't it?");
+                                Console.WriteLine("Press enter to continue");
+                                Console.ReadLine();
+                                five();
+                            }
+                            else
+                            {
+                                Console.WriteLine("HOW DID YOU GET THAT WRONG.");
+                                Console.WriteLine("ITS LITERALLY 2 LETTERS");
+                                Console.WriteLine("press enter to try again");
+                                Console.ReadLine();
+                                Four();
+                            }
+                        }
+                    }
+                    static void five()
+                    {
+                        Console.Clear();
+                        Console.WriteLine("We will now be learning how to say the number Five");
+                        Console.WriteLine("To say Five in Samoan, we say 'Lima' (Lee - Mah)");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        Five();
+                        static void Five()
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Try typing Lima yourself.");
+                            Console.WriteLine("Press enter after typing your answer.");
+                            string f5 = Console.ReadLine();
+                            f5 = f5.ToLower();
+
+                            while (f5 == "lima")
+                            {
+                                Console.WriteLine("INPUT " + f5);
+                                correct();
+                                six();
+                                break;
+                            }
+                            while (f5 != "lima")
+                            {
+                                Console.WriteLine("INPUT " + f5);
+                                incorrect();
+                                Five();
+                                break;
+                            }
+
+                        }
+                        static void six()
+                        {
+                            Console.Clear();
+                            Console.WriteLine("We will now be learning how to say the number Six");
+                            Console.WriteLine("To say Five in Samoan, we say 'ono' (oh - no)");
+                            Console.WriteLine("Press enter to continue");
+                            Console.ReadLine();
+                            Six();
+                            static void Six()
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Try typing Ono yourself.");
+                                Console.WriteLine("Press enter after typing your answer.");
+                                string s6 = Console.ReadLine();
+                                s6 = s6.ToLower();
+
+                                while (s6 == "ono")
+                                {
+                                    Console.WriteLine("INPUT " + s6);
+                                    correct();
+                                    seven();
+                                    break;
+                                }
+                                while (s6 != "ono")
+                                {
+                                    Console.WriteLine("INPUT " + s6);
+                                    incorrect();
+                                    Six();
+                                    break;
+                                }
+
+                            }
+                            static void seven()
+                            {
+                                Console.Clear();
+                                Console.WriteLine("We will now be learning how to say the number Seven");
+                                Console.WriteLine("To say Five in Samoan, we say 'fitu' (fee - two)");
+                                Console.WriteLine("Press enter to continue");
+                                Console.ReadLine();
+                                Seven();
+                                static void Seven()
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Try typing fitu yourself.");
+                                    Console.WriteLine("Press enter after typing your answer.");
+                                    string s7 = Console.ReadLine();
+                                    s7 = s7.ToLower();
+
+                                    while (s7 == "fitu")
+                                    {
+                                        Console.WriteLine("INPUT " + s7);
+                                        correct();
+                                        Eight();
+                                        break;
+                                    }
+                                    while (s7 != "fitu")
+                                    {
+                                        Console.WriteLine("INPUT " + s7);
+                                        incorrect();
+                                        Seven();
+                                        break;
+                                    }
+
+                                }
+                            }
+                            static void Eight()
+                            {
+                                Console.Clear();
+                                Console.WriteLine("We will now be learning how to say the number Eight");
+                                Console.WriteLine("To say Eight in Samoan, we say 'valu' (vah - loo)");
+                                Console.WriteLine("Press enter to continue");
+                                Console.ReadLine();
+                                eight();
+
+                                static void eight()
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Try typing Valu Yourself.");
+                                    Console.WriteLine("Press enter aftere typing your answer.");
+                                    string e8 = Console.ReadLine();
+                                    e8 = e8.ToLower();
+
+                                    if(e8 == "valu")
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("INPUT: " + e8);
+                                        correct();
+                                        nine();
+                                    }
+                                    else if (e8 != "valu")
+                                    {
+                                        Console.WriteLine("INPUT = " + e8);
+                                        incorrect();
+                                        eight();
+                                    }
+                                }
+                            }
+                            static void nine()
+                            {
+                                Console.WriteLine("We will learn how to say the number Nine.");
+                                Console.WriteLine("To say Nine in Samoan, we say 'Iva' (EE - vah)");
+                                Console.WriteLine("Press enter to continue.");
+                                Console.ReadLine();
+                                Nine();
+                                static void Nine()
+                                {
+
+                                }
+                            }
+
+                        }
+                    }
                 }
                 
             }

@@ -18,46 +18,15 @@ namespace EnglishToSamoan
                 DateTime now = DateTime.Now;
                 Console.WriteLine("You have started at " + now.ToString());
                 Console.Title = "Samoan Tutorials Point";
-                Console.WriteLine("Welcome to the Samoan tutorial");
-                Console.WriteLine("Pick a number between 1 and 5 depending on your skill with the Samoan language, and then press enter to continue");
-
-                int answer;
-                int.TryParse(Console.ReadLine(), out answer);
-                //the program will take you to the specific level according to your input
-                if (answer == 1)
-                {
-                    LVLONE L1 = new LVLONE();                  
-                }
-                else if(answer == 2)
-                {
-                    LVLTWO L2 = new LVLTWO();
-                }
-                else if (answer == 3)
-                {
-                    LVLTHREE L3 = new LVLTHREE();
-                }
-                else if (answer == 4)
-                {
-                    LVLFOUR L4 = new LVLFOUR();
-                }
-                else if (answer == 5)
-                {
-                    LVLFIVE L5 = new LVLFIVE();
-                }
-                else
-                {
-                    Console.WriteLine("That is an invalid input");
-                    Console.WriteLine("Press enter to pick again");
-                    Console.ReadLine();
-                    start();
-                }
-            }
-                
-
-                Console.ReadKey();
-                
-            
-            
+                Console.WriteLine("Welcome to the Samoan tutorial.");
+                Console.WriteLine("You will be starting from the first tutorial and move onto the levels after once completing the tutorial.");
+                Console.WriteLine("At the end of each tutorial you will be participating in the 'End Of Tutorial Quiz' to test your skills from the tutorial.");
+                Console.WriteLine("And after completing the quiz you will move onto the next tutorial until you get to Tutorial 5 which is the final tutorial.");
+                Console.WriteLine("You may now press enter to start with Tutorial 1.");
+                Console.ReadLine();
+                LVLONE L1 = new LVLONE();
+               
+            }            
         }
     }
 }

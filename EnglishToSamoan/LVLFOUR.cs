@@ -310,7 +310,9 @@ namespace EnglishToSamoan
                                 Nine();
                                 static void Nine()
                                 {
-
+                                    Console.Clear();
+                                    Console.WriteLine("Try typing 'Iva' Yourself.");
+                                    Console.WriteLine("Press enter after typing your answer");
                                 }
                             }
 

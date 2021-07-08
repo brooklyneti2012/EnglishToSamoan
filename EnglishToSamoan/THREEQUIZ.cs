@@ -403,10 +403,6 @@ namespace EnglishToSamoan
                     {
                         Console.Clear();
                     }
-                    else if (CarryOn == "menu")
-                    {
-                        Program P1 = new Program();
-                    }
                     else
                     {
                         Console.WriteLine("That is an invalid input");

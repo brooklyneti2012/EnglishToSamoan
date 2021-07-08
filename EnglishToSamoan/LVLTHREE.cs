@@ -9,7 +9,7 @@ namespace EnglishToSamoan
         public LVLTHREE()
         {
             Console.Title = "Level 3";
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("Welcome to Tutorial 3/5 of the Samoan Tutorials Point.");
             Console.ForegroundColor = ConsoleColor.White;
@@ -122,6 +122,7 @@ namespace EnglishToSamoan
 
             static void Thursday()
             {
+                Console.ResetColor();
                 Console.Clear();
                 Console.WriteLine("Q4. thursday");
                 Console.WriteLine("Try typing Aso tofi yourself");
@@ -152,6 +153,7 @@ namespace EnglishToSamoan
 
             static void Friday()
             {
+                Console.ResetColor();
                 Console.Clear();
                 Console.WriteLine("Q5. friday");
                 Console.WriteLine("Try typing Aso faraile yourself");
@@ -183,12 +185,12 @@ namespace EnglishToSamoan
             static void Saturday()
             {
                 Console.Clear();
-                Console.WriteLine("Q5. friday");
+                Console.WriteLine("Q6. Saturday");
                 Console.WriteLine("Try typing Aso tona'i yourself");
                 string saturday = Console.ReadLine();
                 saturday = saturday.ToLower();
 
-                if (saturday == "aso tona'i" && saturday == "aso tonai")
+                if (saturday == "aso tona'i" || saturday == "aso tonai")
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("That is correct, press enter to continue");

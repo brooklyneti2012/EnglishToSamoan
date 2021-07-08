@@ -273,7 +273,7 @@ namespace EnglishToSamoan
                     break;
                 }
 
-                if (answer == "a")
+                while (answer != "b")
                 {
                     Console.WriteLine("INPUT " + answer);
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -281,31 +281,8 @@ namespace EnglishToSamoan
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Press enter to try again.");
                     Q4();
-                }
-                else if (answer == "c")
-                {
-                    Console.WriteLine("INPUT " + answer);
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is inccorect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Q4();
-                }
-                else if (answer == "d")
-                {
-                    Console.WriteLine("INPUT " + answer);
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is inccorect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Q4();
-                }
-                else
-                {
-                    Console.WriteLine(answer + " is an invalid input");
-                    Console.WriteLine("Press enter to try again");
-                    Q4();
-                }
+                    break;
+                }              
             }
             static void Q6()
             {
@@ -330,17 +307,7 @@ namespace EnglishToSamoan
                         Q7();
                         break;                    
                 }
-                if (thursday == "aso gafua")
-                {
-                    Console.WriteLine("INPUT " + thursday);
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is incorrect.");
-                    Console.ResetColor();
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q6();
-                }
-                else if (thursday == "aso lua")
+                if (thursday != "aso tofi")
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("That is incorrect.");
@@ -348,43 +315,7 @@ namespace EnglishToSamoan
                     Console.WriteLine("Press enter to try again.");
                     Console.ReadLine();
                     Q6();
-                }
-                else if (thursday == "aso lulu")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is incorrect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q6();
-                }
-                else if (thursday == "aso sa")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is incorrect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q6();
-                }
-                else if (thursday == "aso tonai")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is incorrect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q6();
-                }
-                else if (thursday == "aso faraile")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("That is incorrect.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q6();
-                }
+                }                
                 else
                 {
                     Console.WriteLine("That is an invalid input.");
@@ -426,7 +357,7 @@ namespace EnglishToSamoan
                 }
                 else
                 {
-                    Console.WriteLine("INPUT: " + c + "that is an invalid input.");
+                    Console.WriteLine("INPUT: " + c + " that is an invalid input.");
                     Console.WriteLine("Press enter to try again.");
                     Console.ReadLine();
                     Q7();

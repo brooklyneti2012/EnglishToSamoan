@@ -316,11 +316,64 @@ namespace EnglishToSamoan
                                     Console.WriteLine("Try typing 'Iva' Yourself.");
                                     Console.WriteLine("Press enter after typing your answer");
                                     string NINE = Console.ReadLine();
+                                    NINE = NINE.ToLower();
 
-                                    if (NINE == "Iva")
+                                    if (NINE == "iva")
                                     {
-                                        Console.WriteLine("");
+                                        correct();
+                                        Console.ReadLine();
+                                        Ten();
                                     }
+                                    else if (NINE != "iva")
+                                    {
+                                        Console.WriteLine("INPUT: " + NINE);
+                                        incorrect();
+                                        Console.ReadLine();
+                                        Nine();
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("INPUT: " + NINE);
+                                        incorrect();
+                                        Console.ReadLine();
+                                        Nine();
+                                    }
+                                }
+                            }
+                            static void Ten()
+                            {
+                                Console.Clear();
+                                Console.WriteLine("In Samoan, to say the number Ten.");
+                                Console.WriteLine("we say 'Sefulu' (Seh - foo - loo)");
+                                Console.WriteLine("Press enter to continue.");
+                                Console.ReadLine();
+                                TEN();
+
+                                static void TEN()
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Try typing 'sefulu' yourself.");
+                                    Console.WriteLine("Press enter after typing your answer.");
+                                    string ten = Console.ReadLine();
+                                    ten = ten.ToLower();
+
+                                    switch(ten)
+                                    {
+                                        case "sefulu":
+                                            Console.WriteLine("That is correct.");
+                                            Console.WriteLine("Press enter to continue to the End Of Tutorial Quiz.");
+                                            Console.ReadLine();
+                                            FOURQUIZ FourQuiz = new FOURQUIZ();
+                                            break;
+                                    }
+                                    while(ten != "sefulu")
+                                    {
+                                        Console.WriteLine("That is incorrect");
+                                        Console.WriteLine("Press enter to try again.");
+                                        Console.ReadLine();
+                                        TEN();
+                                    }
+
                                 }
                             }
 

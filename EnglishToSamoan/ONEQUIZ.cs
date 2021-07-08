@@ -9,7 +9,7 @@ namespace EnglishToSamoan
         public ONEQUIZ()
         {
             quiz();
-      static void quiz()
+            static void quiz()
             {
                 Console.Clear();
                 Console.WriteLine("Welcome to the end of tutorial quiz.");

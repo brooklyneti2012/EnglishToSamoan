@@ -24,28 +24,11 @@ namespace EnglishToSamoan
             Console.WriteLine("Two ways to say 'Good' in Samoan is " + words[0] + " (Leh - Lay) and " + words[1] + " (Mah - Neye - Ya)");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("try typing Lelei.");
-            Console.WriteLine("press enter when done typing");
-            string good1 = Console.ReadLine();
-            good1 = good1.ToLower();
-
-            if (good1 == "lelei")
-            {
-                Console.ForegroundColor = ConsoleColor.Green;                
-                Console.WriteLine("Nice job :), press enter to continue ");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("That is incorrect, press enter to try again.");
-                Console.ReadLine();
-                lelei();
-            }
+            lelei();
 
             static void lelei()
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("try typing Lelei.");
                 Console.WriteLine("press enter when done typing");
@@ -112,6 +95,7 @@ namespace EnglishToSamoan
                 Console.WriteLine("Press enter when you're done with your answer.");
                 string please = Console.ReadLine();
                 please = please.ToLower();
+                
                 if(please == "fa'amolemole")
                 {
                     Console.ForegroundColor = ConsoleColor.Green;

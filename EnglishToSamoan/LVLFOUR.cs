@@ -155,6 +155,7 @@ namespace EnglishToSamoan
 
                             if (four == "fa")
                             {
+                                Console.Clear();
                                 Console.WriteLine("INPUT: " + four);
                                 Console.WriteLine("CORRECT");
                                 Console.WriteLine("WOOOOOW, that was really easy wasn't it?");
@@ -164,6 +165,7 @@ namespace EnglishToSamoan
                             }
                             else
                             {
+                                Console.Clear();
                                 Console.WriteLine("HOW DID YOU GET THAT WRONG.");
                                 Console.WriteLine("ITS LITERALLY 2 LETTERS");
                                 Console.WriteLine("press enter to try again");
@@ -313,6 +315,12 @@ namespace EnglishToSamoan
                                     Console.Clear();
                                     Console.WriteLine("Try typing 'Iva' Yourself.");
                                     Console.WriteLine("Press enter after typing your answer");
+                                    string NINE = Console.ReadLine();
+
+                                    if (NINE == "Iva")
+                                    {
+                                        Console.WriteLine("");
+                                    }
                                 }
                             }
 

@@ -32,15 +32,6 @@ namespace EnglishToSamoan
                 Console.WriteLine("Pick an answer out of A, B, C, D");
                 string please1 = Console.ReadLine();
                 please1 = please1.ToLower();
-
-                while (please1 == "c" )
-                {
-                    Console.Clear();
-                    Console.WriteLine("That is correct press enter to move onto the next question.");
-                    Console.ReadLine();
-                    Q2();
-                    break;
-                }
                 switch (please1)
                 {
                     case "a":
@@ -53,11 +44,23 @@ namespace EnglishToSamoan
                         Console.ReadLine();
                         Q1();
                         break;
+                    case "c":
+                        Console.WriteLine("That is correct, press enter to continue");
+                        Console.ReadLine();
+                        Q2();
+                        break;
                     case "d":
                         Console.WriteLine("that is incorrect press enter to try again.");
                         Console.ReadLine();
                         Q1();
                         break;
+                }
+                while(please1 != "c")
+                {
+                    Console.WriteLine("That is incorrect.");
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q1();
                 }
             }
             static void Q2()
@@ -132,6 +135,13 @@ namespace EnglishToSamoan
                     Q4();
                     break;
                 }
+                while (answer2 != "d")
+                {
+                    Console.WriteLine("that is incorrect press enter to try again.");
+                    Console.ReadLine();
+                    Q3();
+                    break;
+                }
                 switch (answer2)
                 {
                     case "a":
@@ -195,7 +205,7 @@ namespace EnglishToSamoan
                         Console.WriteLine("option 4 = " + hint2[3]);
                         Console.WriteLine("Press enter to try the question again.");
                         Console.ReadLine();
-                        Q2();
+                        Q4();
                     }
                 }
                 static void learnt()
@@ -211,13 +221,14 @@ namespace EnglishToSamoan
                     Console.WriteLine("Bad = " + learnt[3]);
                     Console.WriteLine("Press enter to continue.");
                     Console.ReadLine();
+                    done();
                 }
                 static void done()
                 {
+                    Console.Clear();
                     Console.WriteLine("You have official finished 'Level 2' of the Samoan Tutorials Point.");
                     Console.WriteLine("Type 'yes' to continue to the next tutorial.");
                     Console.WriteLine("Or type 'no' if you wish to exit Samoan Tutorials point.");
-                    Console.WriteLine("Or if you want to pick another level, type 'menu' to go to the main menu");
                     Console.WriteLine("Press enter after making your choice");
                     string CarryOn = Console.ReadLine();
                     CarryOn = CarryOn.ToLower();
@@ -229,11 +240,8 @@ namespace EnglishToSamoan
                     else if (CarryOn == "no")
                     {
                         Console.Clear();
-                    }
-                    else if (CarryOn == "menu")
-                    {
-                        Program P1 = new Program();
-                    }
+                        Console.ReadLine();
+                    }                    
                     else
                     {
                         Console.WriteLine("That is an invalid input");

@@ -62,6 +62,11 @@ namespace EnglishToSamoan
                     Console.ReadLine();
                     Q1();
                 }
+                else
+                {
+                    Console.WriteLine("That is an invalid input.");
+                    Console.WriteLine("Press enter to try again");
+                }
             }
 
             static void Q2()
@@ -138,6 +143,13 @@ namespace EnglishToSamoan
                     Q4();
                     break;
                 }
+                while (answer3 != "c")
+                {
+                    Console.WriteLine("That is incorrect.");
+                    Console.WriteLine("Press enter to try again.");
+                    Console.ReadLine();
+                    Q3();
+                }    
                 switch (answer3)
                 {
                     case "a":
@@ -424,6 +436,7 @@ namespace EnglishToSamoan
 
             static void learnt()
             {
+                Console.Clear();
                 DateTime now = DateTime.Now;
                 Console.WriteLine("You have Finished level 3 at " + now.ToString());
                 Console.WriteLine("Today you have learnt these words.");
@@ -442,6 +455,7 @@ namespace EnglishToSamoan
 
                 static void done()
                 {
+                    Console.Clear();
                     Console.WriteLine("You have official finished 'Level 3' of the Samoan Tutorials Point.");
                     Console.WriteLine("Type 'yes' to continue to the next tutorial.");
                     Console.WriteLine("Or type 'no' if you wish to exit Samoan Tutorials point.");

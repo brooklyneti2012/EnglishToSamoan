@@ -23,7 +23,11 @@ namespace EnglishToSamoan
                 Console.WriteLine("At the end of each tutorial you will be participating in the 'End Of Tutorial Quiz' to test your skills from the tutorial.");
                 Console.WriteLine("And after completing the quiz you will move onto the next tutorial until you get to Tutorial 5 which is the final tutorial.");
                 Console.WriteLine("You may now press enter to start with Tutorial 1.");
-                Console.ReadLine();
+                string q = Console.ReadLine();
+                if(q == "2")
+                {
+                    LVLTWO L2 = new LVLTWO();
+                }
                 LVLONE L1 = new LVLONE();
                
             }            

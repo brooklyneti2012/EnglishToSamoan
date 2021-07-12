@@ -74,7 +74,6 @@ namespace EnglishToSamoan
                 }
                 else
                 {
-                    Console.Clear();
                     Console.WriteLine("That is incorrect, try again.");
                     Console.WriteLine("PRESS ENTER TO TRY AGAIN");
                     Console.ReadLine();

@@ -285,8 +285,111 @@ namespace EnglishToSamoan
                 {
                     Console.Clear();
                     Console.WriteLine("Q8. Written answer.");
-                    Console.WriteLine("How do you say ");
+                    Console.WriteLine("How do you say the number 2 in Samoan.");
+                    Console.WriteLine("type your answer and press enter after.");
+                    string lua = Console.ReadLine();
+                    lua = lua.ToLower();
 
+                    switch(lua)
+                    {
+                        case "lua":
+                            Console.WriteLine("That is correct.");
+                            Console.WriteLine("Press enter to continue");
+                            Console.ReadLine();
+                            que9();
+                            break;
+                        default:
+                            Console.WriteLine("That is incorrect.");
+                            Console.WriteLine("Press enter to try again.");
+                            Console.ReadLine();
+                            que8();
+                            break;
+                    }
+
+                }
+                static void que9()
+                {
+                    Console.Clear();
+                    Console.WriteLine("Q9. Multichoice");
+                    Console.WriteLine("Which of the following means the number 5 in Samoan.");
+                    Console.WriteLine("A. tasi");
+                    Console.WriteLine("B. Lua");
+                    Console.WriteLine("C. Lima");
+                    Console.WriteLine("D. iva");
+                    Console.WriteLine("E. tolu");
+                    Console.WriteLine("Type a letter from above and press enter after making your choice.");
+                    string c = Console.ReadLine();
+                    c = c.ToLower();
+                    
+                    if(c == "c")
+                    {
+                        Console.WriteLine("That is correct.");
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                        que10();
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect.");
+                        Console.WriteLine("Press enter to try again.");
+                        Console.ReadLine();
+                        que9();
+                    }
+                }
+                static void que10()
+                {
+                    Console.Clear();
+                    Console.WriteLine("FINAL QUESTION");
+                    Console.WriteLine("Q10. Written Answer.");
+                    Console.WriteLine("How do you say the number 10 in Samoan.");
+                    Console.WriteLine("Type your answer.");
+                    Console.WriteLine("Press enter after typing your answer.");
+                    string sefulu = Console.ReadLine();
+                    sefulu = sefulu.ToLower();
+
+                    while (sefulu == "sefulu")
+                    {
+                        Console.WriteLine("That is correct.");
+                        Console.WriteLine("Press enter to finish the quiz.");
+                        Console.ReadLine();
+                        EndOfQuiz();
+                        break;
+                    }
+                    while (sefulu != "sefulu")
+                    {
+                        Console.WriteLine("That is incorrect.");
+                        Console.WriteLine("Press enter to try again.");
+                        Console.ReadLine();
+                        que10();
+                        break;
+                    }
+                }
+                static void EndOfQuiz()
+                {
+                    Console.Clear();
+                    Console.WriteLine("Congrats on finishing the End Of Tutorial Quiz for Tutorial 4.");
+                    Console.WriteLine("You have officialy learnt numbers 1 - 10 in Samoan.");
+                    Console.WriteLine("Type yes if you want to continue to tutorial 5.");
+                    Console.WriteLine("Or type no if you want to end the Samoan Tutorials Point program.");
+                    Console.WriteLine("Press enter after making your choice.");
+                    string YesOrNo = Console.ReadLine();
+                    YesOrNo = YesOrNo.ToLower();
+
+                    if(YesOrNo == "yes")
+                    {
+                        LVLFIVE L5 = new LVLFIVE();
+                    }
+                    else if(YesOrNo == "no")
+                    {
+                        Console.WriteLine("Goodbye.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is an invalid input.");
+                        Console.WriteLine("Press enter to pick again.");
+                        Console.ReadLine();
+                        EndOfQuiz();
+                    }
                 }
             }
         }

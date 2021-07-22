@@ -38,6 +38,7 @@ namespace EnglishToSamoan
                 else
                 {
                     Console.WriteLine("That is incorrect, press enter to try again.");
+                    Console.ReadLine();
                     Talofa();
                 }
             }
@@ -51,7 +52,7 @@ namespace EnglishToSamoan
             Console.Clear();
             Console.WriteLine("The next word we will try to learn is Goodbye");
             Console.WriteLine("press enter to continue");
-            Console.ReadKey();
+            Console.ReadLine();
             Console.WriteLine("The Samoan way to say Goodbye is 'Tofa' (toh - fah)");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
@@ -87,13 +88,13 @@ namespace EnglishToSamoan
             Console.WriteLine("and teine means 'GIRL' and in some situation 'MUM'");
             Console.WriteLine("_________________________________________________________________");
             Console.WriteLine("PRESS ENTER TO CONTINUE");
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Try typing 'TAMA' yourself");
+            Console.ReadLine();            
             again();
 
             static void again()
             {
+                Console.Clear();
+                Console.WriteLine("Try typing 'TAMA' yourself");
                 string tama = Console.ReadLine();
                 tama = tama.ToLower();
 
@@ -107,17 +108,18 @@ namespace EnglishToSamoan
                 else
                 {
                     Console.WriteLine("That is incorrect try again.");
+                    Console.ReadLine();
                     again();
                 }
             }
 
-            Console.Clear();
-
-            Console.WriteLine("Try typing Teine yourself");
+           
             AGAIN();
 
             static void AGAIN()
             {
+                Console.Clear();
+                Console.WriteLine("Try typing Teine yourself");
                 string teine = Console.ReadLine();
                 teine = teine.ToLower();
 
@@ -131,6 +133,7 @@ namespace EnglishToSamoan
                 else
                 {
                     Console.WriteLine("That was incorrect, try again");
+                    Console.ReadLine();
                     AGAIN();
                 }
             }

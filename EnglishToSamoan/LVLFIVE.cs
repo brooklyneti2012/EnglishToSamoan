@@ -6,24 +6,26 @@ namespace EnglishToSamoan
 {
     public class LVLFIVE
     {
-        static void correct()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("That is correct.");
-            Console.ResetColor();
-            Console.WriteLine("Press enter to continue.");
-            Console.ReadLine();
-        }
-        static void incorrect()
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("That is incorrect.");
-            Console.ResetColor();
-            Console.WriteLine("Press enter to try again.");
-            Console.ReadLine();
-        }
+        
         public LVLFIVE()
         {
+            static void correct()
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("That is correct.");
+                Console.ResetColor();
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+            }
+            static void incorrect()
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("That is incorrect.");
+                Console.ResetColor();
+                Console.WriteLine("Press enter to try again.");
+                Console.ReadLine();
+            }
+
             Console.Clear();
             Console.WriteLine("Welcome to the FINAL tutorial for the Samoan Tutorials Point.");
             Console.WriteLine("In this tutorial you will learn how to say the words...");

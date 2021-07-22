@@ -27,11 +27,7 @@ namespace EnglishToSamoan
                 Console.WriteLine("Or to stay and carry on with the next tutorial.");
                 Console.WriteLine("");
                 Console.WriteLine("You may now press enter to start with Tutorial 1.");
-                string q = Console.ReadLine();
-                if(q == "3")
-                {
-                    LVLTHREE L2 = new LVLTHREE();
-                }
+                Console.ReadLine();               
                 LVLONE L1 = new LVLONE();
                
             }            

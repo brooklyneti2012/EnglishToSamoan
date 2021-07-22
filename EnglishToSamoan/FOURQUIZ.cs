@@ -148,7 +148,7 @@ namespace EnglishToSamoan
                     string F4 = Console.ReadLine();
                     F4 = F4.ToLower();
 
-                    while(F4 == "Fa")
+                    while(F4 == "fa")
                     {
                         Console.WriteLine("That is correct.");
                         Console.WriteLine("Press enter to continue.");

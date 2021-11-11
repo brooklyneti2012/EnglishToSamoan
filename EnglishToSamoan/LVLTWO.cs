@@ -132,6 +132,8 @@ namespace EnglishToSamoan
                     Console.WriteLine("Try typing Malie yourself");
                     Console.WriteLine("Press enter after typing your answer");
                     string malie = Console.ReadLine();
+                    malie = malie.ToLower();
+
                      if (malie == "malie")
                      {
                             Console.ForegroundColor = ConsoleColor.Green;

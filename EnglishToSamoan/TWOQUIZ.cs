@@ -54,13 +54,12 @@ namespace EnglishToSamoan
                         Console.ReadLine();
                         Q1();
                         break;
-                }
-                while(please1 != "c")
-                {
-                    Console.WriteLine("That is incorrect.");
-                    Console.WriteLine("Press enter to try again.");
-                    Console.ReadLine();
-                    Q1();
+                    default:
+                        Console.WriteLine("that is incorrect.");
+                        Console.WriteLine("Press enter to try again.");
+                        Console.ReadLine();
+                        Q1();
+                        break;
                 }
             }
             static void Q2()
@@ -141,25 +140,7 @@ namespace EnglishToSamoan
                     Console.ReadLine();
                     Q3();
                     break;
-                }
-                switch (answer2)
-                {
-                    case "a":
-                        Console.WriteLine("that is incorrect press enter to try again.");
-                        Console.ReadLine();
-                        Q3();
-                        break;
-                    case "b":
-                        Console.WriteLine("that is incorrect press enter to try again.");
-                        Console.ReadLine();
-                        Q3();
-                        break;
-                    case "c":
-                        Console.WriteLine("that is incorrect press enter to try again.");
-                        Console.ReadLine();
-                        Q3();
-                        break;
-                }
+                }               
                 static void Q4()
                 {
                     Console.Clear();
